@@ -1,8 +1,8 @@
 from subprocess import Popen, PIPE, STDOUT
-import json, os
+import json, os, sys
 
-FILLER_TEMPLATE_FILE='Opcodes_TransactionToEmptyFiller.json-template'
-FILLER_RESULT_FILE='Opcodes_TransactionToEmptyFiller.json'
+FILLER_TEMPLATE_FILE='Opcodes_TransactionInit.json-template'
+FILLER_RESULT_FILE='Opcodes_TransactionInitFiller.json'
 
 def compileLLL(source):
   proc = Popen(["lllc", "-x"], stdin=PIPE, stdout=PIPE, stderr=STDOUT)
@@ -139,7 +139,7 @@ goodOps = {
   },
   0x1a: {
     'name': 'BYTE',
-    'lll': '',
+    'lll': '{ (BYTE 0 0x8040201008040201) (RETURN 0x0 0x0) }',
     'expect': 0
   },
   0x20: {
@@ -256,7 +256,7 @@ goodOps = {
   },
   0x53: {
     'name': 'MSTORE8',
-    'lll': ''
+    'lll': '{ (MSTORE8 0 0xff) (RETURN 0x0 0x0) }'
   },
   0x54: {
     'name': 'SLOAD',
@@ -642,7 +642,6 @@ def main():
     filler_template = f.read()
 
   s = filler_template.format(expect_template, json.dumps(data))
-  import pdb; pdb.set_trace()
 
   #remove existing filler before overwriting
   try:

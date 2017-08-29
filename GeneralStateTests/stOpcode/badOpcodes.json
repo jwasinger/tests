@@ -2,7 +2,7 @@
     "badOpcodes" : {
         "_info" : {
             "comment" : "",
-            "filledwith" : "cpp-1.3.0+commit.3fd3cd8f.Linux.g++",
+            "filledwith" : "cpp-1.3.0+commit.86fb96f2.Linux.g++",
             "source" : "/src/GeneralStateTestsFiller/stOpcode/badOpcodesFiller.json"
         },
         "env" : {
