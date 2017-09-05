@@ -17,7 +17,14 @@
                 "storage": {{
                   "0x0": "0x0"
                 }}
-            }}
+            }},
+						"0f572e5295c57f15886f9b263e2f6d2d6c7b5ec6" : {{
+                "balance" : "1000000000000000000",
+								"//code": "{{ 0xffff (RETURN 0x0 0x4) }}",
+								"code": "0x61ffff5060046000f3",
+								"nonce": "1",
+								"storage": {{}}
+						}}
         }},
         "transaction" : {{
             "data" : {1},

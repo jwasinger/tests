@@ -651,7 +651,7 @@ goodOps = {
             "nonce" : "1" 
         }},  
         "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
-            "shouldnotexist": "1"
+            "nonce": "1"
         }} 
     }}   
 }},
@@ -671,11 +671,79 @@ goodOps = {
   },
   0xf4: {
     'name': 'DELEGATECALL',
-    'lll': '{ (DELEGATECALL 100 0x0f572e5295c57f15886f9b263e2f6d2d6c7b5ec6 0 0 0 0) (return 0x0 0x0) }'
+    'lll': '{ (DELEGATECALL 100000 0x0f572e5295c57f15886f9b263e2f6d2d6c7b5ec6 0 0 0 0) (return 0x0 0x0) }',
+		'expect': """
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["Homestead", "EIP150", "EIP158", "Byzantium", "Constantinople"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "nonce": "1"
+        }} 
+    }}   
+}},
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["Frontier"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "shouldnotexist": "1"
+        }} 
+    }}   
+}},
+"""
   },
   0xfa: {
     'name': 'STATICCALL',
-    'lll': '{ (staticcall 100 0x0f572e5295c57f15886f9b263e2f6d2d6c7b5ec6 0 0 0 0) (return 0x0 0x0) }'
+    'lll': '{ (STATICCALL 10000 0x0f572e5295c57f15886f9b263e2f6d2d6c7b5ec6 0 0 0 0) (return 0x0 0x0) }',
+		'expect': """
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["Byzantium", "Constantinople"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "nonce": "1"
+        }} 
+    }}   
+}},
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["Frontier", "Homestead", "EIP150", "EIP158"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "shouldnotexist": "1"
+        }} 
+    }}   
+}},
+"""
   },
   0xfd: {
     'name': 'REVERT',
