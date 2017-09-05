@@ -14,48 +14,39 @@ badOps = set([0x0c, 0x0d, 0x0e, 0x0f, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x21, 0x22, 
 goodOps = { 
   0x00: {
     'name': 'STOP',
-    'lll': '{ (STOP) (RETURN 0x0 0x1) }',
-    'expect': 0
+    'lll': '{ (STOP) (RETURN 0x0 0x1) }'
   }, 
   0x01: {
     'name': 'ADD',
-    'lll': '{ (ADD 0x01 0x01) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (ADD 0x01 0x01) (RETURN 0x0 0x0) }'
   },
   0x02: {
     'name': 'MUL',
-    'lll': '{ (MUL 0x01 0x01) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (MUL 0x01 0x01) (RETURN 0x0 0x0) }'
   },
   0x03: {
     'name': 'SUB',
-    'lll': '{ (SUB 0x01 0x01) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (SUB 0x01 0x01) (RETURN 0x0 0x0) }'
   },
   0x04: {
     'lll': '{ (DIV 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'DIV',
-    'expect': 0
+    'name': 'DIV'
   },
   0x05: {
     'lll': '{ (SDIV 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'SDIV',
-    'expect': 0
+    'name': 'SDIV'
   },
   0x06: {
     'lll': '{ (MOD 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'MOD',
-    'expect': 0
+    'name': 'MOD'
   },
   0x07: {
     'lll': '{ (SMOD 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'SMOD',
-    'expect': 0
+    'name': 'SMOD'
   },
   0x08: {
     'lll': '{ (ADDMOD 0x01 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'ADDMOD',
-    'expect': 0
+    'name': 'ADDMOD'
   },
   0x09: {
     'lll': '{ (MULMOD 0x01 0x01 0x01) (RETURN 0x0 0x0) }',
@@ -63,123 +54,122 @@ goodOps = {
   },
   0x0a: {
     'lll': '{ (EXP 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'EXP',
-    'expect': 0
+    'name': 'EXP'
   },
   0x0b: {
     'lll': '{ (SIGNEXTEND 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'SIGNEXTEND',
-    'expect': 0
+    'name': 'SIGNEXTEND'
   },
   0x10: {
     'lll': '{ (LT 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'LT',
-    'expect': 0
+    'name': 'LT'
   },
   0x11: {
     'lll': '{ (GT 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'GT',
-    'expect': 0
+    'name': 'GT'
   },
   0x12: {
     'lll': '{ (SLT 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'SLT',
-    'expect': 0
+    'name': 'SLT'
   },
   0x13: {
     'lll': '{ (SGT 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'SGT',
-    'expect': 0
+    'name': 'SGT'
   },
   0x14: {
     'lll': '{ (EQ 0x01 0x01) (RETURN 0x0 0x0) }',
-    'name': 'EQ',
-    'expect': 0
+    'name': 'EQ'
   },
   0x15: {
     'name': 'ISZERO',
-    'lll': '{ (ISZERO 0x00) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (ISZERO 0x00) (RETURN 0x0 0x0) }'
   },
   0x16: {
     'lll': '{ (AND 0x00 0x00) (RETURN 0x0 0x0) }',
-    'name': 'AND',
-    'expect': 0
+    'name': 'AND'
   },
   0x17: {
     'lll': '{ (OR 0x00 0x00) (RETURN 0x0 0x0) }',
-    'name': 'OR',
-    'expect': 0
+    'name': 'OR'
   },
   0x18: {
     'lll': '{ (XOR 0x00 0x00) (RETURN 0x0 0x0) }',
-    'name': 'XOR',
-    'expect': 0
+    'name': 'XOR'
   },
   0x19: {
     'lll': '{ (XOR 0x00 0x00) (RETURN 0x0 0x0) }',
-    'name': 'XOR',
-    'expect': 0
+    'name': 'XOR'
   },
   0x1a: {
     'name': 'BYTE',
-    'lll': '{ (BYTE 0 0x8040201008040201) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (BYTE 0 0x8040201008040201) (RETURN 0x0 0x0) }'
   },
   0x20: {
     'lll': '{ (SHA3 0x00 0x00) (RETURN 0x0 0x0) }',
     'bytecode': '600060002060006000f3',
-    'name': 'SHA3',
-    'expect': 0
+    'name': 'SHA3'
   },
   0x30: {
     'name': 'ADDRESS',
-    'lll': '{ (ADDRESS) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (ADDRESS) (RETURN 0x0 0x0) }'
   },
   0x31: {
     'name': 'BALANCE',
-    'lll': '{ (BALANCE 0x0) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (BALANCE 0x0) (RETURN 0x0 0x0) }'
   },
   0x32: {
     'name': 'ORIGIN',
-    'lll': '{ (ORIGIN) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (ORIGIN) (RETURN 0x0 0x0) }'
   },
   0x33: {
     'name': 'CALLER',
-    'lll': '{ (CALLER) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (CALLER) (RETURN 0x0 0x0) }'
   },
   0x34: {
     'name': 'CALLVALUE',
-    'lll': '{ (CALLVALUE) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (CALLVALUE) (RETURN 0x0 0x0) }'
   },
   0x35: {
     'name': 'CALLDATALOAD',
-    'lll': '{ (CALLDATALOAD 0x0) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (CALLDATALOAD 0x0) (RETURN 0x0 0x0) }'
   },
   0x36: {
     'name': 'CALLDATASIZE',
-    'lll': '{ (CALLDATASIZE) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (CALLDATASIZE) (RETURN 0x0 0x0) }'
   },
   0x37: {
     'name': 'CALLDATACOPY',
-    'lll': '{ (CALLDATACOPY 0x0 0x0 0x0) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (CALLDATACOPY 0x0 0x0 0x0) (RETURN 0x0 0x0) }'
   },
   0x38: {
     'name': 'CODESIZE',
-    'lll': '{ (CODESIZE) (RETURN 0x0 0x0) }',
-    'expect': 0
+    'lll': '{ (CODESIZE) (RETURN 0x0 0x0) }'
   },
   0x39: {
-    'name': 'RETURNDATACOPY',
-    'lll': '{ (RETURNDATACOPY 0x0 0x0 0x0) (RETURN 0x0 0x0) }'
+    'name': 'CODECOPY',
+    'lll': '{ (CODECOPY 0x1 0x0 (CODESIZE)) [[ 0 ]] (MLOAD 0x1) (RETURN 0x0 0x0) }',
+    'expect': """
+{{
+    "//comment": "CODECOPY: not supported in earlier networks",
+    "indexes" : {{
+        "data" : {0},
+        "gas" : -1,
+        "value" : -1
+    }},
+    "network" : ["Byzantium", "Constantinople"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "nonce": "1",
+            "storage": {{
+                "0x00": "0x38600060013960015160005560006000f3000000000000000000000000000000"
+            }}
+        }}
+    }}
+}},
+    """
   },
   0x3a: {
     'name': 'GASPRICE',
@@ -195,11 +185,83 @@ goodOps = {
   },
   0x3d: {
     'name': 'RETURNDATASIZE',
-    'lll': '{ (RETURNDATASIZE) (RETURN 0x0 0x0) }'
+    'lll': '{ (RETURNDATASIZE) (RETURN 0x0 0x0) }',
+    'expect': """
+{{
+    "//comment": "RETURNDATASIZE: not supported in earlier networks",
+    "indexes" : {{
+        "data" : {0},
+        "gas" : -1,
+        "value" : -1
+    }},
+    "network" : ["EIP150", "Homestead", "Frontier"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "shouldnotexist": "1"
+        }}
+    }}
+}},
+{{
+    "//comment": "RETURNDATASIZE: not supported in earlier networks",
+    "indexes" : {{
+        "data" : {0},
+        "gas" : -1,
+        "value" : -1
+    }},
+    "network" : ["Byzantium", "Constantinople"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "nonce": "1"
+        }}
+    }}
+}},
+"""
   },
   0x3e: {
     'name': 'RETURNDATACOPY',
-    'lll': '{ (RETURNDATACOPY 0x0 0x0 0x0) (RETURN 0x0 0x0) }'
+    'lll': '{ (RETURNDATACOPY 0x0 0x0 0x0) (RETURN 0x0 0x0) }',
+		'expect': """
+{{
+    "//comment": "RETURNDATACOPY: not supported in earlier networks",
+    "indexes" : {{
+        "data" : {0},
+        "gas" : -1,
+        "value" : -1
+    }},
+    "network" : ["EIP150", "Homestead", "Frontier"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "shouldnotexist": "1"
+        }}
+    }}
+}},
+{{
+    "//comment": "RETURNDATACOPY: not supported in earlier networks",
+    "indexes" : {{
+        "data" : {0},
+        "gas" : -1,
+        "value" : -1
+    }},
+    "network" : ["Byzantium", "Constantinople"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "nonce": "1"
+        }}
+    }}
+}},
+"""
   },
   0x40: {
     'name': 'BLOCKHASH',
@@ -252,16 +314,15 @@ goodOps = {
   },
   0x56: {
     'name': 'JUMP',
-    'lll': '{ (JUMP 0x1) (JUMPDEST) (RETURN 0x0 0x0) }'
+    'lll': '{ (JUMP 0x4) (STOP) (JUMPDEST) (RETURN 0x0 0x0) }'
   },
   0x57: {
     'name': 'JUMPI',
-    'lll': '{ (JUMPI 0x1 0x1) (JUMPDEST) (RETURN 0x0 0x0) }'
+    'lll': '{ (JUMPI 0x6 0x1) (STOP) (JUMPDEST) (RETURN 0x0 0x0) }'
   },
   0x58: {
     'name': 'PC',
     'lll': '{ (PC) (RETURN 0x0 0x0) }'
-
   },
   0x59: {
     'name': 'MSIZE',
@@ -540,7 +601,6 @@ goodOps = {
   0xa0: {
     'name': 'LOG0',
     'lll': '{ (LOG0 0 0) (return 0x0 0x0) }'
-
   },
   0xa1: {
     'name': 'LOG1',
@@ -561,7 +621,41 @@ goodOps = {
   },
   0xf0: {
     'name': 'CREATE',
-    'lll': '{ (CREATE 0xff 0x0 0x0) (return 0x0 0x0) }'
+    'lll': '{ (CREATE 0xff 0x0 0x0) (return 0x0 0x0) }',
+		'expect': """
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["EIP158", "Byzantium", "Constantinople"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "nonce": "2"
+        }} 
+    }}   
+}},
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["Frontier", "Homestead", "EIP150"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "shouldnotexist": "1"
+        }} 
+    }}   
+}},
+"""
   },
   0xf1: {
     'name': 'CALL',
@@ -585,55 +679,121 @@ goodOps = {
   },
   0xfd: {
     'name': 'REVERT',
-    'lll': '{ (REVERT 0x0 0x0) (return 0x0 0x0)}'
+    'lll': '{ (REVERT 0x0 0x0) (return 0x0 0x0)}',
+    'expect': """
+{{
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},
+    "network" : ["ALL"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "shouldnotexist": "1"
+        }}
+    }}
+}},
+"""
   },
   0xff: {
     'name': 'SELFDESTRUCT',
-		'lll': '{ (SELFDESTRUCT (ORIGIN)) }'
+    'lll': '{ (SELFDESTRUCT (ORIGIN)) }',
+		'expect': """
+{{
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},
+    "network" : ["EIP158", "Byzantium", "Constantinople"],
+    "result" : {{
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{
+            "nonce" : "1"
+        }},
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{
+            "shouldnotexist": "1"
+        }}
+    }}
+}},
+"""
   }
 }
 
 MAX=0x1000000000000000000000
 
-import pdb; pdb.set_trace()
-
 expect_template = """
-{   
-    "indexes" : { 
-        "data" : -1, 
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
         "gas" : -1, 
         "value" : -1
-    },  
-    "network" : ["ALL"],
-    "result" : { 
-        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : { 
+    }},  
+    "network" : ["Frontier", "Homestead", "EIP150"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
             "nonce" : "1" 
-        },  
-        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": { } 
-    }   
-}   
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "nonce": "0"
+        }} 
+    }}   
+}},
+{{   
+    "indexes" : {{ 
+        "data" : {0}, 
+        "gas" : -1, 
+        "value" : -1
+    }},  
+    "network" : ["Byzantium", "Constantinople"],
+    "result" : {{ 
+        "a94f5374fce5edbc8e2a8697c15331677e6ebf0b" : {{ 
+            "nonce" : "1" 
+        }},  
+        "6295ee1b4f6dd65047762f924ecd367c17eabf8f": {{ 
+            "nonce": "1"
+        }} 
+    }}   
+}}
 """
 
 def main():
   data = []
-  expect = []
+  data_with_default_expect = []
+  data_with_custom_expect = []
+  custom_expects = []
 
-  for op in goodOps:
+  for index, op in enumerate(goodOps):
     if op > MAX: 
       break
-
+    if index == 52:
+      print(op)
     if 'name' in goodOps[op]:
       #print(goodOps[op]['name'])
       if 'bytecode' in goodOps[op]:
         data.append(goodOps[op]['bytecode'])
       elif 'lll' in goodOps[op]:
         data.append(compileLLL(goodOps[op]['lll']))
+      
+      if 'expect' in goodOps[op]:
+        custom_expects.append(goodOps[op]['expect'].format(index))
+        data_with_custom_expect.append(index)
+      else:
+        data_with_default_expect.append(index)
 
   filler_template = ''
   with open(FILLER_TEMPLATE_FILE, 'r') as f:
     filler_template = f.read()
 
-  s = filler_template.format(expect_template, json.dumps(data))
+  import pdb; pdb.set_trace()
+  custom_expect = ''.join(custom_expects)
+  expect = expect_template.format(json.dumps(data_with_default_expect))
+  expect = custom_expect + expect
+
+  s = filler_template.format(expect, json.dumps(data))
 
   #remove existing filler before overwriting
   try:
