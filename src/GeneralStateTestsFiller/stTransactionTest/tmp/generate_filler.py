@@ -97,12 +97,12 @@ goodOps = {
     'name': 'XOR'
   },
   0x19: {
-    'lll': '{ (XOR 0x00 0x00) (RETURN 0x0 0x0) }',
-    'name': 'XOR'
+    'lll': '{ (NOT 0x00) (RETURN 0x0 0x0) }',
+    'name': 'NOT'
   },
   0x1a: {
     'name': 'BYTE',
-    'lll': '{ (BYTE 0 0x8040201008040201) (RETURN 0x0 0x0) }'
+    'lll': '{ (BYTE 0 0x8050201008040201) (RETURN 0x0 0x0) }'
   },
   0x20: {
     'lll': '{ (SHA3 0x00 0x00) (RETURN 0x0 0x0) }',
@@ -263,30 +263,6 @@ goodOps = {
 }},
 """
   },
-  0x40: {
-    'name': 'BLOCKHASH',
-    'lll': '{ (BLOCKHASH 0x0) (RETURN 0x0 0x0) }'
-  },
-  0x41: {
-    'name': 'COINBASE',
-    'lll': '{ (COINBASE) (RETURN 0x0 0x0) }'
-  },
-  0x42: {
-    'name': 'TIMESTAMP',
-    'lll': '{ (TIMESTAMP) (RETURN 0x0 0x0) }'
-  },
-  0x43: {
-    'name': 'NUMBER',
-    'lll': '{ (NUMBER) (RETURN 0x0 0x0) }'
-  },
-  0x44: {
-    'name': 'DIFFICULTY',
-    'lll': '{ (DIFFICULTY) (RETURN 0x0 0x0) }'
-  },
-  0x45: {
-    'name': 'GASLIMIT',
-    'lll': '{ (GASLIMIT) (RETURN 0x0 0x0) }'
-  },
   0x50: {
     'name': 'POP',
     'lll': '{ 0x00 (POP 0x00) (RETURN 0x0 0x0) }'
@@ -294,7 +270,6 @@ goodOps = {
   0x51: {
     'name': 'MLOAD',
     'lll': '{ (MLOAD 0x0) (RETURN 0x0 0x0)}'
-
   },
   0x52: {
     'name': 'MSTORE',
