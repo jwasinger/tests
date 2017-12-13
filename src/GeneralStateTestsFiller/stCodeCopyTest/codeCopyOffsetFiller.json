@@ -19,7 +19,7 @@
                 "result" : {
                     "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" : {
                         "storage" : {
-                            "0x" : "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                            "0x" : "0xffffffffffffffffffffffffffffffff"
                         }
                     }
                 }
@@ -29,7 +29,7 @@
 						"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" : {
                 "balance" : "1000000000000000000",
 								"//codeDescription": "/* fill memory up */ /* copy call data to memory with offset > call data length */  /* only part of memory should be zeroed out */",
-								"code": "{ (MSTORE 0x00 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) (CALLDATACOPY 0x100 0xffff  0x10) (SSTORE 0x00 (MLOAD 0x00)) }",
+								"code": "{ (MSTORE 0x00 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff) (CALLDATACOPY 0x00 0xffff  0x10) (SSTORE 0x00 (MLOAD 0x00)) }",
                 "nonce" : "1",
 								"storage": {
 								}
