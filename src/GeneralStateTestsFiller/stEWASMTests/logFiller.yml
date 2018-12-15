@@ -116,8 +116,8 @@ log:
         - ALL
       result:
         a94f5374fce5edbc8e2a8697c15331677e6ebf0b:
-          # start_gas    - call - log - logTopic * length - getReturnDataSize - storageStoreCreate * 2
-          # 100000000000 - 700  - 375 - 256 * 8           - 2                 - 20000 * 2
+          # start_gas    - tx    - call - log - logData  * length - getReturnDataSize - storageStoreChange * 2
+          # 100000000000 - 21000 - 700  - 375 - 8        * 255    - 2                 - 5000 * 2
           balance: '99999965883'
         abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd:
           storage: {
