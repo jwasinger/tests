@@ -77,7 +77,6 @@ log1Topic:
           balance: '99999956210'
         deadbeef00000000000000000000000000000000:
           storage: {
-            # length of return data (zero)
             0: '0x00000000000000000000000000000000000000000000000000000000000000ff',
           }
   transaction:
