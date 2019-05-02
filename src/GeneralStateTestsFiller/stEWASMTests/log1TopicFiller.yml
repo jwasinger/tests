@@ -46,7 +46,7 @@ log1Topic:
               ;; length i32 the data length
               (i32.const 0x000000ff)
               ;; numberOfTopics i32 the number of topics following (0 to 4)
-              (i32.const 4)
+              (i32.const 1)
               ;; topic1 i32ptr the memory offset to load topic1 from (u256)
               (i32.const 8)
               ;; topic2 i32ptr the memory offset to load topic2 from (u256)
