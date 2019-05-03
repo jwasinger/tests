@@ -1,4 +1,4 @@
-# test log with log with 5 topics (expect OOG)
+# test log with log with invalid topic pointer 
 logInvalidPtr:
   env:
     currentCoinbase: 2adc25665018aa1fe0e6bc666dac8fc2697ff9ba
