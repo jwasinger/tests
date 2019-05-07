@@ -2,7 +2,7 @@
     "logOOM" : {
         "_info" : {
             "comment" : "",
-            "filledwith" : "testeth 1.7.0-alpha.0-16+commit.e80e1977",
+            "filledwith" : "testeth 1.6.0",
             "lllcversion" : "Version: 0.5.0+commit.1d4f565a.Linux.clang",
             "source" : "src/GeneralStateTestsFiller/stEWASMTests/logOOMFiller.yml",
             "sourceHash" : "e2389a8654a4e4fd9f7c10bd9999c97be88bd33a38d5e0b9184d8cb38bc40c40"

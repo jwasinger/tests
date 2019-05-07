@@ -2,7 +2,7 @@
     "logInvalidNumTopics" : {
         "_info" : {
             "comment" : "",
-            "filledwith" : "testeth 1.7.0-alpha.0-16+commit.e80e1977",
+            "filledwith" : "testeth 1.6.0",
             "lllcversion" : "Version: 0.5.0+commit.1d4f565a.Linux.clang",
             "source" : "src/GeneralStateTestsFiller/stEWASMTests/logInvalidNumTopicsFiller.yml",
             "sourceHash" : "53160f6fdb5bcff64794c0171ff20bf6863a43ac53d3317d632d94dde1a69467"

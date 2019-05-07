@@ -2,7 +2,7 @@
     "logZeroTopics" : {
         "_info" : {
             "comment" : "",
-            "filledwith" : "testeth 1.7.0-alpha.0-16+commit.e80e1977",
+            "filledwith" : "testeth 1.6.0",
             "lllcversion" : "Version: 0.5.0+commit.1d4f565a.Linux.clang",
             "source" : "src/GeneralStateTestsFiller/stEWASMTests/logZeroTopicsFiller.yml",
             "sourceHash" : "c3b569b1f2430796081b644f85c462fa7b69eb8031b025ae60dd90095b7f8261"

@@ -2,7 +2,7 @@
     "log1Topic" : {
         "_info" : {
             "comment" : "",
-            "filledwith" : "testeth 1.7.0-alpha.0-16+commit.e80e1977",
+            "filledwith" : "testeth 1.6.0",
             "lllcversion" : "Version: 0.5.0+commit.1d4f565a.Linux.clang",
             "source" : "src/GeneralStateTestsFiller/stEWASMTests/log1TopicFiller.yml",
             "sourceHash" : "b01906068f4ff5c82d2fe4a839d14e9f2fbc5a5616a8d41cee1c5f72fccb4795"
